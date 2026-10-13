@@ -1,0 +1,142 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>第 0 轮 · 加一步：空岛（家）和整个游戏的流畅 · 满舱而归</title><style>
+:root{--bg:#f6f3ec;--panel:#fffdf8;--ink:#1f1b16;--soft:#5d5448;--line:#e2dacb;--brass:#9a6a1c;--brass-ink:#fff;--sky:#2f6f8f;--code:#f0ebe0}
+@media (prefers-color-scheme:dark){:root{--bg:#14120f;--panel:#1d1a16;--ink:#efe9de;--soft:#b3a893;--line:#3a332a;--brass:#d39b3c;--brass-ink:#1a1408;--sky:#7fb7d4;--code:#2a251e}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px}
+a{color:var(--sky)}h1{font-size:clamp(1.5rem,4.5vw,2.1rem);line-height:1.3;margin:.2em 0 .3em}
+h2{font-size:1.25rem;margin:1.6em 0 .5em}h3{font-size:1.08rem;margin:1.4em 0 .4em}h4,h5,h6{font-size:1rem;margin:1.2em 0 .3em}
+.sub{color:var(--soft);margin:0 0 1.2em}.nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.92rem;margin-bottom:10px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.btn{display:inline-flex;align-items:center;gap:.45em;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn.main{background:var(--brass);border-color:var(--brass);color:var(--brass-ink)}.btn:hover{filter:brightness(1.06)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:16px 0}
+.cols{display:grid;grid-template-columns:1fr;gap:16px}@media (min-width:900px){.cols.two{grid-template-columns:1fr 1fr}main.wide{max-width:1400px}}
+.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--soft);margin-left:6px;vertical-align:middle;font-weight:500}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin:12px 0;padding:0 16px}
+summary{cursor:pointer;padding:12px 0;font-weight:600}details[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+code{background:var(--code);padding:1px 5px;border-radius:5px;font-size:.9em;word-break:break-all}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;font-size:.88rem;line-height:1.6}
+pre code{background:none;padding:0}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding-bottom:14px}
+.shots figure{margin:0}.shots img{width:100%;border-radius:8px;border:1px solid var(--line);image-rendering:pixelated;display:block}
+.shots figcaption{font-size:.85rem;color:var(--soft);margin-top:4px}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem;margin:8px 0}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+ul,ol{padding-left:1.4em}li{margin:.15em 0}.files{font-size:.9rem;columns:2 260px;padding-bottom:12px}.files div{break-inside:avoid}
+.rounds{list-style:none;padding:0;margin:0}.rounds li{border-top:1px solid var(--line);padding:14px 0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.rounds .what{flex:1 1 320px}.rounds .what b{display:block}.rounds .what span{color:var(--soft);font-size:.93rem}
+.rounds .go{display:flex;gap:8px;flex-wrap:wrap}.rounds .go a{font-size:.9rem;padding:6px 12px}
+.muted{color:var(--soft)}footer{margin-top:40px;color:var(--soft);font-size:.85rem}
+</style></head><body><main><div class="nav"><a href="../../index.html">← 全部轮次</a><a href="../002-r01-autoplay/index.html">‹ 上一轮：第 1 轮 · 自动演示</a></div><h1>第 0 轮 · 加一步：空岛（家）和整个游戏的流畅<span class="tag">003-r00-free</span></h1><p class="sub">满舱而归 · 每一轮单独保存、能单独玩；和上一轮比，看这一轮有没有让游戏变好。</p><div class="btns"><a class="btn main" href="../r/003-r00-free/play/index.html" target="_blank" rel="noopener">▶ 玩这一版</a><a class="btn" href="../r/003-r00-free/play/demo.html" target="_blank" rel="noopener">▶ 自动演示</a><a class="btn" href="../002-r01-autoplay/play/index.html" target="_blank" rel="noopener">▶ 玩上一版（002-r01-autoplay）</a></div><div class="card"><p>这一轮做完了。中途断过一次，我先核对了文件夹的现状，再从停下的地方接着做完。依据是 <code>.run/prompt.txt</code>，只在 <code>rounds/003-r00-free</code> 里读写。竖版射击和大地图上开战的玩法我都没动。</p>
+<h3>用户说的四件事</h3>
+<p><strong>1. 视野只看身边，按住 Tab 看全岛</strong>（空岛和夜市都改了）</p>
+<ul><li>
+镜头平滑跟着船长，画面里能看到岛宽的约 38%。设计文档写的是约三分之一，没做到正好三分之一：背景源图只有 1672 宽，要到三分之一得把它放大 1.15 倍，违反美术方案的「只缩不放」。以后出一张约 1920 宽的空岛图就能调到正好。
+</li><li>
+按住 Tab，0.3 秒拉远看全岛，松开拉回。
+</li><li>
+回家卸货时镜头自动拉远，看货箱滚进仓库，滚完再拉回船长身边。
+</li><li>
+要去的建筑不在画面里时，画面边上有个金色箭头指过去。「E」提示改为写在船长头顶。
+</li><li>
+美术按已拍板的分零件方案做：走动镜头用的背景、船、船长、客人、货箱，都从源图直接缩到大图大小，同一场景合用一套 96 色色板。原来几套图一点没变；<code>assets/sprites.js</code> 从 3.7 MB 变成 8.9 MB。
+</li></ul>
+<p><strong>2. 前后遮挡，手画的</strong></p>
+<ul><li>
+白天和夜里各画了约 50 块遮挡：房子、仓库、船坞、树、分段的栅栏、摊位、柜台、告示板、长椅、灯柱、码头柱子等。每块是一个轮廓加一条底线。
+</li><li>
+人和这些东西按脚的位置前后排。能走的范围也重新画了，所以能绕到房子、摊位、树、告示板后面，也能站到码头上船的后面，并被挡住。
+</li><li>
+船长被挡住的部分显示淡淡的剪影。
+</li><li>
+顶到斜栅栏、灯柱、木桶时会顺着滑过去，不会卡住。
+</li></ul>
+<p><strong>3. 能交互的东西有描边</strong></p>
+<ul><li>
+白天：农舍、仓库、集市、告示板、船坞。夜里：开着的摊位和柜台；没开的摊位盖暗色、不描边。
+</li><li>
+平时是亮金加深棕两圈；走近了、或者是提示让你去的那个，变成三圈并一闪一闪。
+</li></ul>
+<p><strong>4. 卡顿</strong></p>
+<ul><li>
+原因：帧率本来就稳在 60，卡的是「看起来一顿一顿」。以前所有画面先画在 640×360 的小画布上再放大，位置都取整到这个格子。4K 画布上一格是 6 个物理像素，所以镜头和船每帧要么不动、要么一下跳 6 或 12 像素。Mac 的 120 Hz 屏上更明显。
+</li><li>
+修法在共用的渲染和镜头上：直接画在全分辨率画布上，位置只对齐到物理像素，像素画本身照样清楚。标题、大地图、船坞、空岛、夜市都换成了这套。
+</li><li>
+量出来的结果（无头 Chrome，1920×1080，两倍像素密度）：
+<ul><li>
+每一屏都稳 60 帧。
+</li><li>
+镜头和人每帧挪动距离的变化，p95 在 1–2.5 个物理像素以内。以前是 0 和 6、12 来回跳。
+</li><li>
+4K 下完整玩一天，约 1 万帧里只在刚载入时卡过一次。
+</li></ul>
+</li></ul>
+<h3>没做到、要知道的</h3>
+<ul><li>
+<strong>副本（竖版射击）没改，还是一顿一顿的</strong>：背景有 57% 的帧不动、一动跳 6 像素。因为它正被另一步重写。新战斗画在大地图上就自动变顺；要是另起一个场景，标上 <code>smooth = true</code>、位置用 <code>G.Px.s</code> 代替 <code>Math.round</code> 就行。
+</li><li>
+<strong>合并时要注意 <code>game/scene_map.js</code></strong>：我只改了画法的几行（镜头和船、海盗、残骸对齐到物理像素，影子换成像素椭圆）。开战、追逐、扔货的逻辑没动。<code>scene_shmup.js</code> 完全没动。改动清单在 <code>核心切片设计.md</code> 第五节第 5 条。
+</li><li>
+<strong>两处小的玩法数字改了</strong>：
+<ul><li>
+夜市客人走的路改成绕开田和栅栏。路长了约一成，客人走路从 56 提到 62 像素/秒补回来。
+</li><li>
+告示板和夜市摊位的站位各挪了几个像素，免得船长被自己要用的东西挡住。
+</li></ul>
+</li></ul>
+<h3>跑过的检查（全部无头）</h3>
+<ul><li>
+自动演示 8 分钟：玩完一整局又开了第二局，0 次卡住、0 个错误，每晚走掉 0 人。
+</li><li>
+自动试玩脚本（全流程、订单、驮兽、被击落、被追、船坞、乱按）全部走通，0 个错误。
+</li></ul>
+<h3>文件</h3>
+<p>在 <code>这一轮的文件夹</code> 下：</p>
+<ul><li>
+可玩：<code>index.html</code>
+</li><li>
+设计：<code>核心切片设计.md</code>，新加的第五节；<code>design.md</code> 没改。
+</li><li>
+说明：<code>notes.md</code> 最上面一节写了这一轮试什么、假设 30–41、占位清单和已知问题。
+</li><li>
+截图：<code>截图/</code> 里 00–17 重拍了，18–24 是这一轮新加的空岛和夜市。
+</li><li>
+新代码：<code>game/view.js</code>、<code>game/isle_layout.js</code>、<code>game/isle_view.js</code>
+</li><li>
+新检查工具：<code>tools/smooth.mjs</code>、<code>tools/isle_shots.mjs</code>、<code>tools/layout.mjs</code>
+</li></ul>
+<p>没有往网上推任何东西，没建仓库。</p></div><details><summary>截图（这一轮新拍或改过的 40 张）</summary><div class="shots"><figure><a href="../../media/524c9f44a2590f6d.png" target="_blank"><img loading="lazy" src="../../media/524c9f44a2590f6d.png" alt="esc"></a><figcaption>esc</figcaption></figure><figure><a href="../../media/67478dcfdf4db904.png" target="_blank"><img loading="lazy" src="../../media/67478dcfdf4db904.png" alt="last"></a><figcaption>last</figcaption></figure><figure><a href="../../media/a1dd56d06ce6e41e.png" target="_blank"><img loading="lazy" src="../../media/a1dd56d06ce6e41e.png" alt="isle_board"></a><figcaption>isle_board</figcaption></figure><figure><a href="../../media/cafd0af3fced1528.png" target="_blank"><img loading="lazy" src="../../media/cafd0af3fced1528.png" alt="isle_fence"></a><figcaption>isle_fence</figcaption></figure><figure><a href="../../media/39b846ad8a8145b5.png" target="_blank"><img loading="lazy" src="../../media/39b846ad8a8145b5.png" alt="isle_front"></a><figcaption>isle_front</figcaption></figure><figure><a href="../../media/8172afab60c38c78.png" target="_blank"><img loading="lazy" src="../../media/8172afab60c38c78.png" alt="isle_house"></a><figcaption>isle_house</figcaption></figure><figure><a href="../../media/9b1495ee377862b5.png" target="_blank"><img loading="lazy" src="../../media/9b1495ee377862b5.png" alt="isle_n_counter"></a><figcaption>isle_n_counter</figcaption></figure><figure><a href="../../media/8b2c278c34c595bf.png" target="_blank"><img loading="lazy" src="../../media/8b2c278c34c595bf.png" alt="isle_n_lamp"></a><figcaption>isle_n_lamp</figcaption></figure><figure><a href="../../media/0fb431c5cdb655c2.png" target="_blank"><img loading="lazy" src="../../media/0fb431c5cdb655c2.png" alt="isle_n_orange"></a><figcaption>isle_n_orange</figcaption></figure><figure><a href="../../media/f123bc497c52b09c.png" target="_blank"><img loading="lazy" src="../../media/f123bc497c52b09c.png" alt="isle_n_stall"></a><figcaption>isle_n_stall</figcaption></figure><figure><a href="../../media/22dc8c0fc2bfc6c5.png" target="_blank"><img loading="lazy" src="../../media/22dc8c0fc2bfc6c5.png" alt="isle_pier"></a><figcaption>isle_pier</figcaption></figure><figure><a href="../../media/dfcd47fa2b4c8f5d.png" target="_blank"><img loading="lazy" src="../../media/dfcd47fa2b4c8f5d.png" alt="isle_stall"></a><figcaption>isle_stall</figcaption></figure><figure><a href="../../media/8ac6d997d89462d1.png" target="_blank"><img loading="lazy" src="../../media/8ac6d997d89462d1.png" alt="isle_tree"></a><figcaption>isle_tree</figcaption></figure><figure><a href="../../media/ed8bdc1d0bd2dc8c.png" target="_blank"><img loading="lazy" src="../../media/ed8bdc1d0bd2dc8c.png" alt="sheet_dock"></a><figcaption>sheet_dock</figcaption></figure><figure><a href="../../media/61dde5009f1a7854.png" target="_blank"><img loading="lazy" src="../../media/61dde5009f1a7854.png" alt="sheet_island"></a><figcaption>sheet_island</figcaption></figure><figure><a href="../../media/7813b19920dfbd70.png" target="_blank"><img loading="lazy" src="../../media/7813b19920dfbd70.png" alt="sheet_night"></a><figcaption>sheet_night</figcaption></figure><figure><a href="../../media/0d4650a9329c9d51.png" target="_blank"><img loading="lazy" src="../../media/0d4650a9329c9d51.png" alt="00_标题"></a><figcaption>00_标题</figcaption></figure><figure><a href="../../media/3111a391ccdfa989.png" target="_blank"><img loading="lazy" src="../../media/3111a391ccdfa989.png" alt="01_开场被追"></a><figcaption>01_开场被追</figcaption></figure><figure><a href="../../media/aa1377406194cf69.png" target="_blank"><img loading="lazy" src="../../media/aa1377406194cf69.png" alt="02_开场扔货"></a><figcaption>02_开场扔货</figcaption></figure><figure><a href="../../media/e8bc520d204a1878.png" target="_blank"><img loading="lazy" src="../../media/e8bc520d204a1878.png" alt="03_冒尖而归"></a><figcaption>03_冒尖而归</figcaption></figure><figure><a href="../../media/a827bb9208e00791.png" target="_blank"><img loading="lazy" src="../../media/a827bb9208e00791.png" alt="05_船坞装船"></a><figcaption>05_船坞装船</figcaption></figure><figure><a href="../../media/48e96f3c1f0d6a46.png" target="_blank"><img loading="lazy" src="../../media/48e96f3c1f0d6a46.png" alt="06_木筏装好"></a><figcaption>06_木筏装好</figcaption></figure><figure><a href="../../media/f2aaeba3707b01d1.png" target="_blank"><img loading="lazy" src="../../media/f2aaeba3707b01d1.png" alt="07_出航"></a><figcaption>07_出航</figcaption></figure><figure><a href="../../media/32820e2d9f768585.png" target="_blank"><img loading="lazy" src="../../media/32820e2d9f768585.png" alt="08_晴岚港进货"></a><figcaption>08_晴岚港进货</figcaption></figure><figure><a href="../../media/2aaa9387971f5953.png" target="_blank"><img loading="lazy" src="../../media/2aaa9387971f5953.png" alt="09_海盗巡逻船"></a><figcaption>09_海盗巡逻船</figcaption></figure><figure><a href="../../media/814b8a2ca2a42622.png" target="_blank"><img loading="lazy" src="../../media/814b8a2ca2a42622.png" alt="10_副本"></a><figcaption>10_副本</figcaption></figure><figure><a href="../../media/8438783ab57a9268.png" target="_blank"><img loading="lazy" src="../../media/8438783ab57a9268.png" alt="11_战后面板"></a><figcaption>11_战后面板</figcaption></figure><figure><a href="../../media/d46889917aef9274.png" target="_blank"><img loading="lazy" src="../../media/d46889917aef9274.png" alt="12_满载回家"></a><figcaption>12_满载回家</figcaption></figure><figure><a href="../../media/5601811c2bcf883b.png" target="_blank"><img loading="lazy" src="../../media/5601811c2bcf883b.png" alt="13_货箱滚进仓库"></a><figcaption>13_货箱滚进仓库</figcaption></figure><figure><a href="../../media/a58b7ab7fd2696e4.png" target="_blank"><img loading="lazy" src="../../media/a58b7ab7fd2696e4.png" alt="14_摆摊"></a><figcaption>14_摆摊</figcaption></figure><figure><a href="../../media/b6b8ed750ffa13fa.png" target="_blank"><img loading="lazy" src="../../media/b6b8ed750ffa13fa.png" alt="15_夜市"></a><figcaption>15_夜市</figcaption></figure><figure><a href="../../media/2168c7240786fb4d.png" target="_blank"><img loading="lazy" src="../../media/2168c7240786fb4d.png" alt="16_打烊结算"></a><figcaption>16_打烊结算</figcaption></figure><figure><a href="../../media/81b4f685a29711ff.png" target="_blank"><img loading="lazy" src="../../media/81b4f685a29711ff.png" alt="17_第二天早上"></a><figcaption>17_第二天早上</figcaption></figure><figure><a href="../../media/f366ada92a58cab4.png" target="_blank"><img loading="lazy" src="../../media/f366ada92a58cab4.png" alt="18_空岛走动镜头和交互描边"></a><figcaption>18_空岛走动镜头和交互描边</figcaption></figure><figure><a href="../../media/3fbea0d4e32696ac.png" target="_blank"><img loading="lazy" src="../../media/3fbea0d4e32696ac.png" alt="19_空岛躲在树后面"></a><figcaption>19_空岛躲在树后面</figcaption></figure><figure><a href="../../media/b4c9b2a30877a59f.png" target="_blank"><img loading="lazy" src="../../media/b4c9b2a30877a59f.png" alt="20_空岛告示板后面"></a><figcaption>20_空岛告示板后面</figcaption></figure><figure><a href="../../media/a4f835c63e7a4757.png" target="_blank"><img loading="lazy" src="../../media/a4f835c63e7a4757.png" alt="21_空岛码头船后面"></a><figcaption>21_空岛码头船后面</figcaption></figure><figure><a href="../../media/41c9c6d4f0f176b4.png" target="_blank"><img loading="lazy" src="../../media/41c9c6d4f0f176b4.png" alt="22_按住Tab看全岛"></a><figcaption>22_按住Tab看全岛</figcaption></figure><figure><a href="../../media/570742e1724876fc.png" target="_blank"><img loading="lazy" src="../../media/570742e1724876fc.png" alt="23_夜市摊位后面"></a><figcaption>23_夜市摊位后面</figcaption></figure><figure><a href="../../media/d9e376b90a4be716.png" target="_blank"><img loading="lazy" src="../../media/d9e376b90a4be716.png" alt="24_夜市按住Tab看全岛"></a><figcaption>24_夜市按住Tab看全岛</figcaption></figure></div></details><details><summary>用时</summary><p>用时 1 小时 55 分 · 173 步 · 输出 66k token · 重读上下文 57.6M token · 做完于 2026-10-13 11:54</p></details><details><summary>改了哪些文件（比起 002-r01-autoplay：新加 7 · 改动 18 · 删掉 0）</summary><div class="files"><div>＋ game/isle_layout.js</div><div>＋ game/isle_view.js</div><div>＋ game/view.js</div><div>＋ tools/isle_shots.mjs</div><div>＋ tools/layout.html</div><div>＋ tools/layout.mjs</div><div>＋ tools/smooth.mjs</div><div>～ assets/sprites.js</div><div>～ demo.html</div><div>～ design.md</div><div>～ game/art.js</div><div>～ game/main.js</div><div>～ game/scene_dock.js</div><div>～ game/scene_island.js</div><div>～ game/scene_map.js</div><div>～ game/scene_market.js</div><div>～ game/ui.js</div><div>～ index.html</div><div>～ notes.md</div><div>～ tools/build.html</div><div>～ tools/cdp.mjs</div><div>～ tools/play.mjs</div><div>～ tools/plays/order.mjs</div><div>～ tools/sheet.html</div><div>～ 核心切片设计.md</div></div></details><details><summary>这一轮收到的 prompt</summary><pre># 满舱而归 · 对比模式简报
+
+设计文档：`design.md`（在你的文件夹里；SHA-256 0c5f0c7655f0c7d9f10105cb47d5071ea891a68d6fd4a9250fb70553e49995bc）。这份文档是用户和设计师一起定下的，是这个游戏的设计依据。
+
+用户对自己每个游戏都有的要求：
+- Steam 上的 PC 游戏，横屏，网页技术做，打包成 Windows 和 macOS 版。
+- 美术全部用代码画，默认像素风，不用任何外部生图工具。
+- 开发期界面只做中文，上线时再加语言。
+- 试玩版和正式版都有在线联机。
+- 代码放 GitHub 时一律建私有库，不建公开库，不用 GitHub Pages 发网页。
+
+工作方式：
+- 不问用户任何问题：自己决定，把每个假设写进 `notes.md`。
+- 交付物放在你自己的文件夹里：能在浏览器里玩的 `index.html`（或能打开的构建）、设计文档、`notes.md`（试什么、哪些是占位、做了哪些假设）。
+- 不要读别的文件夹里的东西，也不要去找别的会话的结果。
+- 本机：Chrome 在 /Applications/Google Chrome.app，Node 和 Python 3 在 PATH 上。任何自动试跑都要无头，不要在用户屏幕上弹窗口。
+- 这一段不往网上推送或发布任何东西（不建远程仓库、不部署），都留在本机。
+- 没有时间和轮数限制，做完为止。
+
+
+这一段的目标：空岛（家）和整个游戏的流畅。游戏已经在当前文件夹里（前几步做的），在它上面改，别的不动。
+1. 空岛的镜头跟着船长，只看得到身边一片（大约三分之一座岛宽），走到哪看到哪，按住 Tab 拉远看全岛（设计文档「2 空岛」的镜头一行刚改过）。
+2. 空岛有前后遮挡：船长走到房子、树、栏杆、摊位、码头后面会被挡住。
+3. 能交互的建筑、摊位、柜台、告示板一眼看得出能交互。
+夜市也在这座岛上，一样照做。
+4. 整个游戏玩起来很卡，要顺，每一屏都查。主会话量过：无头 Chrome 里 1920×1080、两倍像素密度（4K 画布），每一屏都稳 60 帧，主线程只占 2–3%，所以卡多半不是算得慢，是看起来顿；用户在 Mac 上玩。
+另有一步会同时把战斗改成在大地图上横版原地打（会重写竖版射击和大地图上开战的部分）：那两处的玩法别动；卡顿出在它们里面的，修在共用的渲染和镜头上。
+
+简报和设计文档都在你当前的文件夹里。
+
+用户这次的原话（这一轮最优先的事）：
+「在家里 场景关系需要有遮挡啊 可以手动画个遮挡， 然后视野只在当前的附近，并不是直接总览全地形 ,然后可交互部分需要是有 outline 的 要不然看不出来可以交互」「然后整个游戏很卡 这个问题要解决」
+美术照设计文档「画面风格」里的「美术方案（已拍板）」做，这一条比上面「美术全部用代码画、不用外部生图工具」优先：零件、工具和说明在 美术/（先读 美术/说明.md）。</pre></details></main></body></html>

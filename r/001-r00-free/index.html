@@ -1,0 +1,148 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>第 0 轮 · 自由做 · 满舱而归</title><style>
+:root{--bg:#f6f3ec;--panel:#fffdf8;--ink:#1f1b16;--soft:#5d5448;--line:#e2dacb;--brass:#9a6a1c;--brass-ink:#fff;--sky:#2f6f8f;--code:#f0ebe0}
+@media (prefers-color-scheme:dark){:root{--bg:#14120f;--panel:#1d1a16;--ink:#efe9de;--soft:#b3a893;--line:#3a332a;--brass:#d39b3c;--brass-ink:#1a1408;--sky:#7fb7d4;--code:#2a251e}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px}
+a{color:var(--sky)}h1{font-size:clamp(1.5rem,4.5vw,2.1rem);line-height:1.3;margin:.2em 0 .3em}
+h2{font-size:1.25rem;margin:1.6em 0 .5em}h3{font-size:1.08rem;margin:1.4em 0 .4em}h4,h5,h6{font-size:1rem;margin:1.2em 0 .3em}
+.sub{color:var(--soft);margin:0 0 1.2em}.nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.92rem;margin-bottom:10px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.btn{display:inline-flex;align-items:center;gap:.45em;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn.main{background:var(--brass);border-color:var(--brass);color:var(--brass-ink)}.btn:hover{filter:brightness(1.06)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:16px 0}
+.cols{display:grid;grid-template-columns:1fr;gap:16px}@media (min-width:900px){.cols.two{grid-template-columns:1fr 1fr}main.wide{max-width:1400px}}
+.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--soft);margin-left:6px;vertical-align:middle;font-weight:500}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin:12px 0;padding:0 16px}
+summary{cursor:pointer;padding:12px 0;font-weight:600}details[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+code{background:var(--code);padding:1px 5px;border-radius:5px;font-size:.9em;word-break:break-all}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;font-size:.88rem;line-height:1.6}
+pre code{background:none;padding:0}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding-bottom:14px}
+.shots figure{margin:0}.shots img{width:100%;border-radius:8px;border:1px solid var(--line);image-rendering:pixelated;display:block}
+.shots figcaption{font-size:.85rem;color:var(--soft);margin-top:4px}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem;margin:8px 0}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+ul,ol{padding-left:1.4em}li{margin:.15em 0}.files{font-size:.9rem;columns:2 260px;padding-bottom:12px}.files div{break-inside:avoid}
+.rounds{list-style:none;padding:0;margin:0}.rounds li{border-top:1px solid var(--line);padding:14px 0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.rounds .what{flex:1 1 320px}.rounds .what b{display:block}.rounds .what span{color:var(--soft);font-size:.93rem}
+.rounds .go{display:flex;gap:8px;flex-wrap:wrap}.rounds .go a{font-size:.9rem;padding:6px 12px}
+.muted{color:var(--soft)}footer{margin-top:40px;color:var(--soft);font-size:.85rem}
+</style></head><body><main><div class="nav"><a href="../../index.html">← 全部轮次</a></div><h1>第 0 轮 · 自由做<span class="tag">001-r00-free</span></h1><p class="sub">满舱而归 · 每一轮单独保存、能单独玩；和上一轮比，看这一轮有没有让游戏变好。</p><div class="btns"><a class="btn main" href="../r/001-r00-free/play/index.html" target="_blank" rel="noopener">▶ 玩这一版</a></div><div class="card"><h3>第 1 段做完了：能玩的核心切片，美术按已拍板的方案做</h3>
+<p><strong>打开方式</strong>：双击 <code>index.html</code>，用 Chrome 打开。不用服务器，也不联网。</p>
+<h4>你最在意的那条：美术方案和技能都写进了方案</h4>
+<p><code>核心切片设计.md</code> 第一节就是这件事，写了三点：</p>
+<ul><li>
+美术用 design.md 已拍板的方案：<strong>分零件生成 + 代码拼装 + 零件分层动画</strong>（hi-bit 路线）。这一条比「美术全部用代码画、不用外部生图工具」优先。
+</li><li>
+出图、处理、拼装、动画都<strong>走 <code>pixel-character-design</code> 技能的 hi-bit 路线</strong>：出零件用技能里的 gen-parts.sh 和 codex-imagegen，拼装用 hibit-kit.js，构建和截图用 hibit_build.py。
+</li><li>
+这一轮读不到技能本体，所以直接用 <code>美术/</code> 里按方案做好的东西：零件、原样的 <code>hibit-kit.js</code>，以及从技能的构建页和运行页改出来的 <code>tools/build.html</code> 和 <code>game/art.js</code>。
+</li></ul>
+<p>美术的具体做法：</p>
+<ul><li>
+每个场景都从源图直接缩到 640×360 的像素格，每个场景一套色板（大部分 96 色，副本 64 色）。
+</li><li>
+自动拼装：船首像按轮廓贴到船头，货堆和炮按脚下那段船舷的高度放，绳子从气囊的铜环拉到甲板。
+</li><li>
+动画全靠零件分层，每秒 12 帧：螺旋桨 4 帧压扁转动、气囊比船身慢半拍浮动、甲板货一层层堆高、热度火光、被击中闪白。
+</li><li>
+重建全部美术只要一条命令：<code>node tools/build.mjs</code>，约 4 秒，无头运行。
+</li></ul>
+<h4>切片里能玩到的一整圈</h4>
+<ol><li>
+<strong>开场 60 秒</strong>：被海盗追，按 Q 扔货，进港「冒尖而归」，木筏散架。
+</li><li>
+<strong>船坞</strong>：在侧面图上把模块一块块装回去，升力、推重比、速度档、甲板能堆几箱当场变化，有出航检查。
+</li><li>
+<strong>大地图</strong>：出航到城镇进货。第一箱一上船，速度档就从「快」掉到「中」，船身一沉，配一声闷响。热度到了会被盯上：可以扔货拖时间、钻进安全圈，或被追上时二选一（开战 / 认栽）。
+</li><li>
+<strong>副本</strong>：打海盗巡逻船，进竖版射击，自动开火，有冲刺、技能和擦弹充能。被打中时甲板上的箱子会飞出去，敌船的货也要飞过去接；打完是战后面板。
+</li><li>
+<strong>回家</strong>：货箱一箱箱滚进仓库，打上满舱 / 冒尖标。
+</li><li>
+<strong>夜市</strong>：摆摊、敲铃开市，客人带耐心条，船长去摊位拿货（一次最多两单）、回柜台递，有小费。还有大客户订单，打烊时口碑拆开写。然后进入第二天。
+</li><li>
+<strong>另外做了</strong>：造驮兽货船（甲板能堆 6–8 箱），以及被击落 → 留 1 件 → 沉货点 → 打跑守货的海盗 → 打捞。
+</li></ol>
+<h4>测试情况</h4>
+<p>所有测试都在无头 Chrome 里跑，不弹窗口：</p>
+<ul><li>
+从标题一路自动玩到第二天早上，没有报错。真实画面存了 18 张，在 <code>截图/</code>。
+</li><li>
+被追、被击落、订单、驮兽、热度这几条流程分别单独跑过。
+</li><li>
+七个场景各乱按 120 次，0 个运行时错误。
+</li></ul>
+<h4>主要假设（不问你，都写在 notes.md）</h4>
+<ul><li>
+<strong>范围</strong>：只做木筏和驮兽两种底模、7 种模块。据点、首领、乱流、迷雾、海上事件、招牌货、伙计、建造模式、多人都留到后面。
+</li><li>
+<strong>压缩的数</strong>：地图航程压到设计的约 1/4–1/3，被盯上的平均间隔压到 1/4，好让 10 分钟内就能碰到追逐。
+</li><li>
+<strong>自己定的</strong>：连发炮的技能 design.md 没写，我定成「铜雨」；冲刺的参数也是我定的。
+</li><li>
+<strong>平台</strong>：这一段只做了网页版，Windows 和 macOS 打包放到后面。联机还没做，但改状态的操作都写成了改一个 JSON 存档的纯函数，以后可以直接当主机权威的指令用。
+</li><li>
+<strong>没往网上推</strong>：没建远程仓库，也没部署。
+</li></ul>
+<h4>占位和已知问题</h4>
+<p>有一批是用已有零件拼的占位，以后按方案用技能出图、重跑构建就能替换，清单在 notes.md：</p>
+<ul><li>
+大地图的海图图块，以及铁桅镇、砂岩堡（现在是晴岚港抠图换色）。
+</li><li>
+模块图标、残骸、精英海盗。
+</li><li>
+船长只有左右两个朝向；音效是现场合成的。
+</li></ul>
+<p>已知问题：</p>
+<ul><li>
+船坞的位置框会盖住一部分船。
+</li><li>
+夜市船长跑一趟 2–3 秒，比设计的 4–6 秒快，切片里压力偏小。
+</li><li>
+副本里直接关掉页面，下次会回到开打前（设计要求按被击落算）。
+</li></ul>
+<p>文件都在 这一轮的文件夹：</p>
+<ul><li>
+index.html
+</li><li>
+核心切片设计.md
+</li><li>
+notes.md
+</li><li>
+截图/
+</li><li>
+game/
+</li><li>
+assets/sprites.js
+</li><li>
+tools/（构建和自动试跑脚本）
+</li><li>
+design.md（原样未改，SHA 一致）
+</li></ul></div><details><summary>截图（这一轮新拍或改过的 18 张）</summary><div class="shots"><figure><a href="../../media/fb0c6b2887ae1dbc.png" target="_blank"><img loading="lazy" src="../../media/fb0c6b2887ae1dbc.png" alt="00_标题"></a><figcaption>00_标题</figcaption></figure><figure><a href="../../media/b24e612748f0e8e4.png" target="_blank"><img loading="lazy" src="../../media/b24e612748f0e8e4.png" alt="01_开场被追"></a><figcaption>01_开场被追</figcaption></figure><figure><a href="../../media/5acabb998b7ad3ee.png" target="_blank"><img loading="lazy" src="../../media/5acabb998b7ad3ee.png" alt="02_开场扔货"></a><figcaption>02_开场扔货</figcaption></figure><figure><a href="../../media/52f7b5f983e69d0b.png" target="_blank"><img loading="lazy" src="../../media/52f7b5f983e69d0b.png" alt="03_冒尖而归"></a><figcaption>03_冒尖而归</figcaption></figure><figure><a href="../../media/5439bf6503db3a99.png" target="_blank"><img loading="lazy" src="../../media/5439bf6503db3a99.png" alt="04_船坞散架"></a><figcaption>04_船坞散架</figcaption></figure><figure><a href="../../media/a827bb9208e00791.png" target="_blank"><img loading="lazy" src="../../media/a827bb9208e00791.png" alt="05_船坞装船"></a><figcaption>05_船坞装船</figcaption></figure><figure><a href="../../media/52b635303b05f183.png" target="_blank"><img loading="lazy" src="../../media/52b635303b05f183.png" alt="06_木筏装好"></a><figcaption>06_木筏装好</figcaption></figure><figure><a href="../../media/1a5827b8de56d9f7.png" target="_blank"><img loading="lazy" src="../../media/1a5827b8de56d9f7.png" alt="07_出航"></a><figcaption>07_出航</figcaption></figure><figure><a href="../../media/97e4ae63173c0a18.png" target="_blank"><img loading="lazy" src="../../media/97e4ae63173c0a18.png" alt="08_晴岚港进货"></a><figcaption>08_晴岚港进货</figcaption></figure><figure><a href="../../media/107afd3289321781.png" target="_blank"><img loading="lazy" src="../../media/107afd3289321781.png" alt="09_海盗巡逻船"></a><figcaption>09_海盗巡逻船</figcaption></figure><figure><a href="../../media/400d07a9c85a9c75.png" target="_blank"><img loading="lazy" src="../../media/400d07a9c85a9c75.png" alt="10_副本"></a><figcaption>10_副本</figcaption></figure><figure><a href="../../media/66f2c061c96e45a1.png" target="_blank"><img loading="lazy" src="../../media/66f2c061c96e45a1.png" alt="11_战后面板"></a><figcaption>11_战后面板</figcaption></figure><figure><a href="../../media/de9f9456f08b8725.png" target="_blank"><img loading="lazy" src="../../media/de9f9456f08b8725.png" alt="12_满载回家"></a><figcaption>12_满载回家</figcaption></figure><figure><a href="../../media/8610386d360022c9.png" target="_blank"><img loading="lazy" src="../../media/8610386d360022c9.png" alt="13_货箱滚进仓库"></a><figcaption>13_货箱滚进仓库</figcaption></figure><figure><a href="../../media/9d2a83d2931dea93.png" target="_blank"><img loading="lazy" src="../../media/9d2a83d2931dea93.png" alt="14_摆摊"></a><figcaption>14_摆摊</figcaption></figure><figure><a href="../../media/e1b3f206dd7a3d1d.png" target="_blank"><img loading="lazy" src="../../media/e1b3f206dd7a3d1d.png" alt="15_夜市"></a><figcaption>15_夜市</figcaption></figure><figure><a href="../../media/ba09b703c11f4b02.png" target="_blank"><img loading="lazy" src="../../media/ba09b703c11f4b02.png" alt="16_打烊结算"></a><figcaption>16_打烊结算</figcaption></figure><figure><a href="../../media/443bdf799b7b043e.png" target="_blank"><img loading="lazy" src="../../media/443bdf799b7b043e.png" alt="17_第二天早上"></a><figcaption>17_第二天早上</figcaption></figure></div></details><details><summary>用时</summary><p>用时 1 小时 55 分 · 133 步 · 输出 147k token · 重读上下文 39.7M token · 做完于 2026-10-13 07:38</p></details><details><summary>改了哪些文件（比起起点：新加 40 · 改动 0 · 删掉 0）</summary><div class="files"><div>＋ assets/sprites.js</div><div>＋ design.md</div><div>＋ game/art.js</div><div>＋ game/data.js</div><div>＋ game/main.js</div><div>＋ game/scene_dock.js</div><div>＋ game/scene_island.js</div><div>＋ game/scene_map.js</div><div>＋ game/scene_market.js</div><div>＋ game/scene_shmup.js</div><div>＋ game/sfx.js</div><div>＋ game/state.js</div><div>＋ game/test.js</div><div>＋ game/ui.js</div><div>＋ game/util.js</div><div>＋ index.html</div><div>＋ notes.md</div><div>＋ tools/build.html</div><div>＋ tools/build.mjs</div><div>＋ tools/cdp.mjs</div><div>＋ tools/play.mjs</div><div>＋ tools/plays/beast.mjs</div><div>＋ tools/plays/chase.mjs</div><div>＋ tools/plays/day1.mjs</div><div>＋ tools/plays/dock.mjs</div><div>＋ tools/plays/down.mjs</div><div>＋ tools/plays/full.mjs</div><div>＋ tools/plays/heat.mjs</div><div>＋ tools/plays/market.mjs</div><div>＋ tools/plays/night1.mjs</div><div>＋ tools/plays/opening.mjs</div><div>＋ tools/plays/order.mjs</div><div>＋ tools/plays/soak.mjs</div><div>＋ tools/probe.html</div><div>＋ tools/probe.mjs</div><div>＋ tools/sheet.html</div><div>＋ tools/sheet.mjs</div><div>＋ tools/shot.mjs</div><div>＋ tools/zoom.py</div><div>＋ 核心切片设计.md</div></div></details><details><summary>这一轮收到的 prompt</summary><pre># 满舱而归 · 对比模式简报
+
+设计文档：`design.md`（在你的文件夹里；SHA-256 bb5ff91e4492cd339ec953b4652e8cd1e6f118db0236080ea319787289bc23b1）。这份文档是用户和设计师一起定下的，是这个游戏的设计依据。
+
+用户对自己每个游戏都有的要求：
+- Steam 上的 PC 游戏，横屏，网页技术做，打包成 Windows 和 macOS 版。
+- 美术全部用代码画，默认像素风，不用任何外部生图工具。
+- 开发期界面只做中文，上线时再加语言。
+- 试玩版和正式版都有在线联机。
+- 代码放 GitHub 时一律建私有库，不建公开库，不用 GitHub Pages 发网页。
+
+工作方式：
+- 不问用户任何问题：自己决定，把每个假设写进 `notes.md`。
+- 交付物放在你自己的文件夹里：能在浏览器里玩的 `index.html`（或能打开的构建）、设计文档、`notes.md`（试什么、哪些是占位、做了哪些假设）。
+- 不要读别的文件夹里的东西，也不要去找别的会话的结果。
+- 本机：Chrome 在 /Applications/Google Chrome.app，Node 和 Python 3 在 PATH 上。任何自动试跑都要无头，不要在用户屏幕上弹窗口。
+- 这一段不往网上推送或发布任何东西（不建远程仓库、不部署），都留在本机。
+- 没有时间和轮数限制，做完为止。
+
+
+这一段的目标：第 1 段：根据设计文档完成设计并做出一个能玩的核心切片——玩家最常做的那件事完整走一圈，手感是真的，美术是第一版。做完停下。
+
+简报和设计文档都在你当前的文件夹里。
+
+用户这次的原话（这一轮最优先的事）：
+「写到方案里，然后方案里要说明 用这个美术方案 走 用这个技能」——指的是设计文档「画面风格」里的「美术方案（已拍板）」：美术按分零件生成 + 代码拼装 + 零件分层动画做，这一条比上面「美术全部用代码画、不用外部生图工具」优先。这一轮读不到那个技能：按方案做好的零件、工具和说明都在你文件夹的 美术/ 里（先读 美术/说明.md），直接用；设计文档里的图在 设计文档图/。</pre></details></main></body></html>

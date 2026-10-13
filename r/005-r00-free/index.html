@@ -1,0 +1,141 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>第 0 轮 · 加一步：空岛照星露谷的做法重新拼 · 满舱而归</title><style>
+:root{--bg:#f6f3ec;--panel:#fffdf8;--ink:#1f1b16;--soft:#5d5448;--line:#e2dacb;--brass:#9a6a1c;--brass-ink:#fff;--sky:#2f6f8f;--code:#f0ebe0}
+@media (prefers-color-scheme:dark){:root{--bg:#14120f;--panel:#1d1a16;--ink:#efe9de;--soft:#b3a893;--line:#3a332a;--brass:#d39b3c;--brass-ink:#1a1408;--sky:#7fb7d4;--code:#2a251e}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px}
+a{color:var(--sky)}h1{font-size:clamp(1.5rem,4.5vw,2.1rem);line-height:1.3;margin:.2em 0 .3em}
+h2{font-size:1.25rem;margin:1.6em 0 .5em}h3{font-size:1.08rem;margin:1.4em 0 .4em}h4,h5,h6{font-size:1rem;margin:1.2em 0 .3em}
+.sub{color:var(--soft);margin:0 0 1.2em}.nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.92rem;margin-bottom:10px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.btn{display:inline-flex;align-items:center;gap:.45em;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn.main{background:var(--brass);border-color:var(--brass);color:var(--brass-ink)}.btn:hover{filter:brightness(1.06)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:16px 0}
+.cols{display:grid;grid-template-columns:1fr;gap:16px}@media (min-width:900px){.cols.two{grid-template-columns:1fr 1fr}main.wide{max-width:1400px}}
+.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--soft);margin-left:6px;vertical-align:middle;font-weight:500}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin:12px 0;padding:0 16px}
+summary{cursor:pointer;padding:12px 0;font-weight:600}details[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+code{background:var(--code);padding:1px 5px;border-radius:5px;font-size:.9em;word-break:break-all}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;font-size:.88rem;line-height:1.6}
+pre code{background:none;padding:0}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding-bottom:14px}
+.shots figure{margin:0}.shots img{width:100%;border-radius:8px;border:1px solid var(--line);image-rendering:pixelated;display:block}
+.shots figcaption{font-size:.85rem;color:var(--soft);margin-top:4px}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem;margin:8px 0}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+ul,ol{padding-left:1.4em}li{margin:.15em 0}.files{font-size:.9rem;columns:2 260px;padding-bottom:12px}.files div{break-inside:avoid}
+.rounds{list-style:none;padding:0;margin:0}.rounds li{border-top:1px solid var(--line);padding:14px 0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.rounds .what{flex:1 1 320px}.rounds .what b{display:block}.rounds .what span{color:var(--soft);font-size:.93rem}
+.rounds .go{display:flex;gap:8px;flex-wrap:wrap}.rounds .go a{font-size:.9rem;padding:6px 12px}
+.muted{color:var(--soft)}footer{margin-top:40px;color:var(--soft);font-size:.85rem}
+</style></head><body><main><div class="nav"><a href="../../index.html">← 全部轮次</a><a href="../004-r00-free/index.html">‹ 上一轮：第 0 轮 · 加一步：战斗改版</a></div><h1>第 0 轮 · 加一步：空岛照星露谷的做法重新拼<span class="tag">005-r00-free</span></h1><p class="sub">满舱而归 · 每一轮单独保存、能单独玩；和上一轮比，看这一轮有没有让游戏变好。</p><div class="btns"><a class="btn main" href="../r/005-r00-free/play/index.html" target="_blank" rel="noopener">▶ 玩这一版</a><a class="btn" href="../r/005-r00-free/play/demo.html" target="_blank" rel="noopener">▶ 自动演示</a><a class="btn" href="../003-r00-free/play/index.html" target="_blank" rel="noopener">▶ 玩上一版（003-r00-free）</a></div><div class="card"><p>空岛改成照星露谷那样拼起来了，夜市也用同一座岛。改动全在 <code>这一轮的文件夹</code> 里，打开 <code>index.html</code> 就能玩。所有自动检查都是无头跑的，全部通过；有两处卡住是自动演示跑出来以后修掉的（见文末）。</p>
+<p><strong>这一轮的变化</strong></p>
+<ul><li>
+<strong>空岛是拼起来的，不是一整张图</strong>：地面用草地、石板路、泥地、木板四种图块铺，16 像素一格。前面的岛边和底下的岛底是单独一层。农舍、仓库、船坞、告示板、柜台、三个摊位、栈桥，以及每棵树、每段栅栏、每盏灯、木桶、长椅、灌木，都是从 <code>资料/空岛零件/</code> 抠出来的透明零件，位置写在 <code>game/isle_layout.js</code>。原来那张整岛图在空岛上不再用。
+</li><li>
+<strong>前后遮挡按零件轮廓，看不到方框</strong>：人、船、货箱和零件按脚底的位置排前后，零件透明的地方不挡人。侧墙往后退的房子和斜着的栅栏按列切开排，站在船坞侧墙后面时只有侧墙那几列挡你。
+</li><li>
+<strong>半透明和剪影</strong>：树、房子、摊位、告示板、栈桥上的船挡住船长时淡到 42%；栅栏、灯柱这类矮东西挡住大半个人时，画一个淡淡的剪影。
+</li><li>
+<strong>拉近也清楚</strong>：零件从源图直接缩到要的大小（船长 62 高、农舍 250 宽）。走动镜头一个零件像素就是画面一个像素，1920×1080 下是 3×3 个屏幕像素。走动和看全岛两套像素格各一套色板；按住 Tab 看全岛照旧。
+</li><li>
+<strong>夜市在同一座岛</strong>：同一套零件载入时调暗、点灯（煤气灯、摊位和柜台的油灯、船坞的灯、亮着的窗户），夜里的颜色另算一套色板。人和船走到灯下会亮起来。
+</li><li>
+<strong>描边</strong>：沿零件自己的形状描金边，走近了或者该去的那个照旧一闪一闪。
+</li><li>
+<strong>镜头和流畅度保留</strong>：上一步的跟随镜头、按住 Tab、画面顺都还在。走动时画面里看得到岛宽的约 41%（以前 38%）。
+</li></ul>
+<p><strong>检查结果</strong></p>
+<ul><li>
+自动演示（<code>tools/demo.mjs 8 6 6</code>）：约 48 分钟游戏时间，玩完一整局 6 天又进了第二局，0 次卡住、0 个错误，每晚 0 人走掉。改完画法后又跑了 4 分钟，也是 0 卡住、0 错误。
+</li><li>
+4K 画布（1920×1080、两倍像素密度）：每一屏稳 60 帧。空岛和夜市主线程占用从每帧逐个画零件时的 92–95% 降到 43%，办法是载入时把地面和零件烘成一层，每帧只重画要盖在人身上的零件。
+</li><li>
+从标题玩到第二天早上约 1 万帧，只有刚载入时标题第一帧一次长任务（约 110 毫秒）。
+</li><li>
+<code>soak</code> 乱按 0 个错误；<code>full / order / beast / down / chase / dock / heat</code> 都走通；三晚夜市 0 人走掉；演示开关检查全部 OK。
+</li><li>
+截图 <code>截图/00–17</code> 重拍了，<code>18–26</code> 是新岛：躲在树后面树变透明、告示板按轮廓挡住、栈桥上的船后面、按住 Tab 看全岛、夜市摊位后面、夜市柜台和灯光等。
+</li></ul>
+<p><strong>合并时要知道（另一步在改战斗）</strong></p>
+<ul><li>
+<code>scene_map.js</code>、<code>scene_shmup.js</code>、<code>scene_dock.js</code>、<code>view.js</code>、<code>art.js</code>、<code>ui.js</code> 一行没改；船坞、大地图、副本那几套美术和以前逐字节一样。
+</li><li>
+<code>main.js</code> 只改了两行：标题背景换成拼好的岛，还有一行注释。
+</li><li>
+<code>isle_layout.js</code>、<code>isle_view.js</code> 是重写的；<code>scene_island.js</code>、<code>scene_market.js</code> 改成从布局文件读位置；<code>demo.js</code> 只改了找路。
+</li><li>
+构建产物里删掉了 <code>G.SPR.island</code>、<code>G.SPR.night</code>、<code>nightL</code>。另一步要是用到它们（比如拿小货箱画界面），换成 <code>G.SPR.isleS.crates</code> 或 <code>G.SPR.isleS.cratesUI</code>。<code>sprites.js</code> 从 8.9 MB 降到 5.5 MB。
+</li></ul>
+<p><strong>自己定的几件事</strong>（都写在 <code>notes.md</code> 假设 42–56）</p>
+<ul><li>
+世界尺寸定为 1920×1080，正好是原来逻辑坐标的 3 倍，所以玩法数值都不用改。
+</li><li>
+集市 1 级岛上只摆 3 个摊位；橙、紫两个是绿、蓝摊位换色做的，升级集市后才出现。伙计屋和配货台的零件已经构建好，但岛上不摆，因为这一段没有伙计和招牌货。
+</li><li>
+所有站位按新岛重新摆了：摊位离柜台 28 / 54 / 54（以前 22 / 47 / 56）；客人从栈桥走到柜台的路长 249，比以前（273）短一成，客人走路速度没改。
+</li><li>
+走路一帧走得远时分小步走，不会一步跨过细栅栏。这是因为自动演示第一次跑时在 6 倍快进下从斜栅栏缝里钻进菜地出不来；缝也堵上了。另一处卡住是机器人顶在灌木角上蹭，改了测试工具的找路。
+</li></ul>
+<p><strong>已知问题和占位</strong></p>
+<ul><li>
+地面路边是代码做的圆滑边，不是星露谷那种手画过渡图块。
+</li><li>
+前崖面是同一张图左右重复，看全岛时能看出三道一样的瀑布。
+</li><li>
+夜里的灯不闪。
+</li><li>
+船长和客人还是只有左右两个朝向。
+</li><li>
+建造模式还没做，但建筑现在都是零件了，可以做了。
+</li></ul>
+<p><code>核心切片设计.md</code> 新加了第七节，写做法、色板、夜里的光和性能数据；<code>notes.md</code> 顶上是这一轮的「试什么、假设、占位、检查、合并说明」。</p>
+<p>文件都在 <code>这一轮的文件夹</code> 里：</p>
+<ul><li>
+<code>index.html</code>
+</li><li>
+<code>notes.md</code>
+</li><li>
+<code>核心切片设计.md</code>
+</li><li>
+<code>game/isle_layout.js</code>
+</li><li>
+<code>game/isle_view.js</code>
+</li><li>
+<code>tools/build.html</code>
+</li><li>
+<code>截图/</code>
+</li></ul></div><details><summary>截图（这一轮新拍或改过的 87 张）</summary><div class="shots"><figure><a href="../../media/7cc4c4ea9ea7eb17.png" target="_blank"><img loading="lazy" src="../../media/7cc4c4ea9ea7eb17.png" alt="last"></a><figcaption>last</figcaption></figure><figure><a href="../../media/a2a7dcbc1a00124b.png" target="_blank"><img loading="lazy" src="../../media/a2a7dcbc1a00124b.png" alt="isle_board"></a><figcaption>isle_board</figcaption></figure><figure><a href="../../media/33750ebca98285ab.png" target="_blank"><img loading="lazy" src="../../media/33750ebca98285ab.png" alt="isle_fence"></a><figcaption>isle_fence</figcaption></figure><figure><a href="../../media/6a8f9fd4cd5e368f.png" target="_blank"><img loading="lazy" src="../../media/6a8f9fd4cd5e368f.png" alt="isle_front"></a><figcaption>isle_front</figcaption></figure><figure><a href="../../media/de93b6b71f969e2d.png" target="_blank"><img loading="lazy" src="../../media/de93b6b71f969e2d.png" alt="isle_house"></a><figcaption>isle_house</figcaption></figure><figure><a href="../../media/2ea477211bbef38d.png" target="_blank"><img loading="lazy" src="../../media/2ea477211bbef38d.png" alt="isle_n_counter"></a><figcaption>isle_n_counter</figcaption></figure><figure><a href="../../media/b584ec9279b4848f.png" target="_blank"><img loading="lazy" src="../../media/b584ec9279b4848f.png" alt="isle_n_front"></a><figcaption>isle_n_front</figcaption></figure><figure><a href="../../media/f8b5c989426f2efe.png" target="_blank"><img loading="lazy" src="../../media/f8b5c989426f2efe.png" alt="isle_n_lamp"></a><figcaption>isle_n_lamp</figcaption></figure><figure><a href="../../media/2bf7aa652e18e9c0.png" target="_blank"><img loading="lazy" src="../../media/2bf7aa652e18e9c0.png" alt="isle_n_red"></a><figcaption>isle_n_red</figcaption></figure><figure><a href="../../media/c22a9d7236146407.png" target="_blank"><img loading="lazy" src="../../media/c22a9d7236146407.png" alt="isle_n_stall"></a><figcaption>isle_n_stall</figcaption></figure><figure><a href="../../media/5d6b913d886a3458.png" target="_blank"><img loading="lazy" src="../../media/5d6b913d886a3458.png" alt="isle_pier"></a><figcaption>isle_pier</figcaption></figure><figure><a href="../../media/e288a65cf19ccd0c.png" target="_blank"><img loading="lazy" src="../../media/e288a65cf19ccd0c.png" alt="isle_plaza"></a><figcaption>isle_plaza</figcaption></figure><figure><a href="../../media/53f572c309781e79.png" target="_blank"><img loading="lazy" src="../../media/53f572c309781e79.png" alt="isle_shipyard"></a><figcaption>isle_shipyard</figcaption></figure><figure><a href="../../media/5f45cf6f0a691918.png" target="_blank"><img loading="lazy" src="../../media/5f45cf6f0a691918.png" alt="isle_stall"></a><figcaption>isle_stall</figcaption></figure><figure><a href="../../media/81c1204d9e7a6794.png" target="_blank"><img loading="lazy" src="../../media/81c1204d9e7a6794.png" alt="isle_tree"></a><figcaption>isle_tree</figcaption></figure><figure><a href="../../media/f28adfefc4d6c5f0.png" target="_blank"><img loading="lazy" src="../../media/f28adfefc4d6c5f0.png" alt="isle_warehouse"></a><figcaption>isle_warehouse</figcaption></figure><figure><a href="../../media/8978cc8852a83a1d.png" target="_blank"><img loading="lazy" src="../../media/8978cc8852a83a1d.png" alt="layout_day_0_0_1920_1080_1"></a><figcaption>layout_day_0_0_1920_1080_1</figcaption></figure><figure><a href="../../media/6881f170cdceff73.png" target="_blank"><img loading="lazy" src="../../media/6881f170cdceff73.png" alt="layout_day_0_0_1920_1080_1_walk-foot-base-spots-paths-grid100"></a><figcaption>layout_day_0_0_1920_1080_1_walk-foot-base-spots-paths-grid100</figcaption></figure><figure><a href="../../media/80569f8b5170bda0.png" target="_blank"><img loading="lazy" src="../../media/80569f8b5170bda0.png" alt="layout_day_1150_300_640_360_2_cap-1300-450"></a><figcaption>layout_day_1150_300_640_360_2_cap-1300-450</figcaption></figure><figure><a href="../../media/2af72cf77af5df3c.png" target="_blank"><img loading="lazy" src="../../media/2af72cf77af5df3c.png" alt="layout_day_480_220_640_360_2_cap-640-500"></a><figcaption>layout_day_480_220_640_360_2_cap-640-500</figcaption></figure><figure><a href="../../media/6031286405cfb9d7.png" target="_blank"><img loading="lazy" src="../../media/6031286405cfb9d7.png" alt="layout_day_60_520_480_300_3_walk-foot-base"></a><figcaption>layout_day_60_520_480_300_3_walk-foot-base</figcaption></figure><figure><a href="../../media/5ce441c91bde351b.png" target="_blank"><img loading="lazy" src="../../media/5ce441c91bde351b.png" alt="layout_day_960_420_480_300_3_walk-foot-base"></a><figcaption>layout_day_960_420_480_300_3_walk-foot-base</figcaption></figure><figure><a href="../../media/56cb4fee91bf99ec.png" target="_blank"><img loading="lazy" src="../../media/56cb4fee91bf99ec.png" alt="layout_day_960_500_420_260_3_walk-foot"></a><figcaption>layout_day_960_500_420_260_3_walk-foot</figcaption></figure><figure><a href="../../media/572581b99a48e78e.png" target="_blank"><img loading="lazy" src="../../media/572581b99a48e78e.png" alt="layout_night_0_0_1920_1080_1"></a><figcaption>layout_night_0_0_1920_1080_1</figcaption></figure><figure><a href="../../media/217a09c4dfe9cecb.png" target="_blank"><img loading="lazy" src="../../media/217a09c4dfe9cecb.png" alt="layout_night_0_200_640_360_2"></a><figcaption>layout_night_0_200_640_360_2</figcaption></figure><figure><a href="../../media/e032dc92b3740434.png" target="_blank"><img loading="lazy" src="../../media/e032dc92b3740434.png" alt="layout_night_480_300_640_360_2"></a><figcaption>layout_night_480_300_640_360_2</figcaption></figure><figure><a href="../../media/80eef44a77ce503e.png" target="_blank"><img loading="lazy" src="../../media/80eef44a77ce503e.png" alt="p_arrive1"></a><figcaption>p_arrive1</figcaption></figure><figure><a href="../../media/51823b2329c3dce4.png" target="_blank"><img loading="lazy" src="../../media/51823b2329c3dce4.png" alt="p_arrive2"></a><figcaption>p_arrive2</figcaption></figure><figure><a href="../../media/c423f2bb5dd14c2c.png" target="_blank"><img loading="lazy" src="../../media/c423f2bb5dd14c2c.png" alt="p_beast0"></a><figcaption>p_beast0</figcaption></figure><figure><a href="../../media/7206c453b491adf5.png" target="_blank"><img loading="lazy" src="../../media/7206c453b491adf5.png" alt="p_beast1"></a><figcaption>p_beast1</figcaption></figure><figure><a href="../../media/df1998f2be42fc24.png" target="_blank"><img loading="lazy" src="../../media/df1998f2be42fc24.png" alt="p_beast2"></a><figcaption>p_beast2</figcaption></figure><figure><a href="../../media/edd1d966af982f79.png" target="_blank"><img loading="lazy" src="../../media/edd1d966af982f79.png" alt="p_beast3"></a><figcaption>p_beast3</figcaption></figure><figure><a href="../../media/d72e762104e04da6.png" target="_blank"><img loading="lazy" src="../../media/d72e762104e04da6.png" alt="p_board"></a><figcaption>p_board</figcaption></figure><figure><a href="../../media/87f1d0d3e396d6b4.png" target="_blank"><img loading="lazy" src="../../media/87f1d0d3e396d6b4.png" alt="p_board2"></a><figcaption>p_board2</figcaption></figure><figure><a href="../../media/bf41e0985f4dbdee.png" target="_blank"><img loading="lazy" src="../../media/bf41e0985f4dbdee.png" alt="p_c0"></a><figcaption>p_c0</figcaption></figure><figure><a href="../../media/74367bfa559e7d7c.png" target="_blank"><img loading="lazy" src="../../media/74367bfa559e7d7c.png" alt="p_c1"></a><figcaption>p_c1</figcaption></figure><figure><a href="../../media/1c970e0182b9914e.png" target="_blank"><img loading="lazy" src="../../media/1c970e0182b9914e.png" alt="p_c2"></a><figcaption>p_c2</figcaption></figure><figure><a href="../../media/a4ef6bd69e20aba9.png" target="_blank"><img loading="lazy" src="../../media/a4ef6bd69e20aba9.png" alt="p_c3"></a><figcaption>p_c3</figcaption></figure><figure><a href="../../media/23f5c5a8ccef27a7.png" target="_blank"><img loading="lazy" src="../../media/23f5c5a8ccef27a7.png" alt="p_c4"></a><figcaption>p_c4</figcaption></figure><figure><a href="../../media/29cc05b1b012cba9.png" target="_blank"><img loading="lazy" src="../../media/29cc05b1b012cba9.png" alt="p_c5"></a><figcaption>p_c5</figcaption></figure><figure><a href="../../media/22f632e4960cf2db.png" target="_blank"><img loading="lazy" src="../../media/22f632e4960cf2db.png" alt="p_c6"></a><figcaption>p_c6</figcaption></figure><figure><a href="../../media/70b7f21b225a9b09.png" target="_blank"><img loading="lazy" src="../../media/70b7f21b225a9b09.png" alt="p_c7"></a><figcaption>p_c7</figcaption></figure><figure><a href="../../media/8bc1fb567c34a8ba.png" target="_blank"><img loading="lazy" src="../../media/8bc1fb567c34a8ba.png" alt="p_card2"></a><figcaption>p_card2</figcaption></figure><figure><a href="../../media/5439bf6503db3a99.png" target="_blank"><img loading="lazy" src="../../media/5439bf6503db3a99.png" alt="p_dock0"></a><figcaption>p_dock0</figcaption></figure><figure><a href="../../media/ffa5f19c8e62a655.png" target="_blank"><img loading="lazy" src="../../media/ffa5f19c8e62a655.png" alt="p_dock1"></a><figcaption>p_dock1</figcaption></figure><figure><a href="../../media/6641d1a0c20a47f8.png" target="_blank"><img loading="lazy" src="../../media/6641d1a0c20a47f8.png" alt="p_dock2"></a><figcaption>p_dock2</figcaption></figure><figure><a href="../../media/10de01fc41eabf4a.png" target="_blank"><img loading="lazy" src="../../media/10de01fc41eabf4a.png" alt="p_down"></a><figcaption>p_down</figcaption></figure><figure><a href="../../media/ead89f86df4b21e8.png" target="_blank"><img loading="lazy" src="../../media/ead89f86df4b21e8.png" alt="p_ff"></a><figcaption>p_ff</figcaption></figure><figure><a href="../../media/1833a1fda91890ca.png" target="_blank"><img loading="lazy" src="../../media/1833a1fda91890ca.png" alt="p_launch"></a><figcaption>p_launch</figcaption></figure><figure><a href="../../media/447a84c7ea95d80c.png" target="_blank"><img loading="lazy" src="../../media/447a84c7ea95d80c.png" alt="p_night1"></a><figcaption>p_night1</figcaption></figure><figure><a href="../../media/921276d529bc0201.png" target="_blank"><img loading="lazy" src="../../media/921276d529bc0201.png" alt="p_open1"></a><figcaption>p_open1</figcaption></figure><figure><a href="../../media/5627e6d31180c859.png" target="_blank"><img loading="lazy" src="../../media/5627e6d31180c859.png" alt="p_open2"></a><figcaption>p_open2</figcaption></figure><figure><a href="../../media/d9732032922b84e2.png" target="_blank"><img loading="lazy" src="../../media/d9732032922b84e2.png" alt="p_open3"></a><figcaption>p_open3</figcaption></figure><figure><a href="../../media/049ffb7812eef23b.png" target="_blank"><img loading="lazy" src="../../media/049ffb7812eef23b.png" alt="p_open4"></a><figcaption>p_open4</figcaption></figure><figure><a href="../../media/70ad8d15352a98e1.png" target="_blank"><img loading="lazy" src="../../media/70ad8d15352a98e1.png" alt="p_open5"></a><figcaption>p_open5</figcaption></figure><figure><a href="../../media/467e6f819a322e38.png" target="_blank"><img loading="lazy" src="../../media/467e6f819a322e38.png" alt="p_prep2"></a><figcaption>p_prep2</figcaption></figure><figure><a href="../../media/be221c5e999aa4c6.png" target="_blank"><img loading="lazy" src="../../media/be221c5e999aa4c6.png" alt="p_salv"></a><figcaption>p_salv</figcaption></figure><figure><a href="../../media/9a2de45eb3f03512.png" target="_blank"><img loading="lazy" src="../../media/9a2de45eb3f03512.png" alt="p_sea0"></a><figcaption>p_sea0</figcaption></figure><figure><a href="../../media/e8e503b3d12fd02c.png" target="_blank"><img loading="lazy" src="../../media/e8e503b3d12fd02c.png" alt="p_sunk"></a><figcaption>p_sunk</figcaption></figure><figure><a href="../../media/3ecc281d61dd113c.png" target="_blank"><img loading="lazy" src="../../media/3ecc281d61dd113c.png" alt="p_towed"></a><figcaption>p_towed</figcaption></figure><figure><a href="../../media/14a54225a37a28d1.png" target="_blank"><img loading="lazy" src="../../media/14a54225a37a28d1.png" alt="sheet_island"></a><figcaption>sheet_island</figcaption></figure><figure><a href="../../media/88ffb142d8131e36.png" target="_blank"><img loading="lazy" src="../../media/88ffb142d8131e36.png" alt="00_标题"></a><figcaption>00_标题</figcaption></figure><figure><a href="../../media/e1625a4a407a6175.png" target="_blank"><img loading="lazy" src="../../media/e1625a4a407a6175.png" alt="01_开场被追"></a><figcaption>01_开场被追</figcaption></figure><figure><a href="../../media/7ef7245c986838b2.png" target="_blank"><img loading="lazy" src="../../media/7ef7245c986838b2.png" alt="02_开场扔货"></a><figcaption>02_开场扔货</figcaption></figure><figure><a href="../../media/73b758709530735a.png" target="_blank"><img loading="lazy" src="../../media/73b758709530735a.png" alt="03_冒尖而归"></a><figcaption>03_冒尖而归</figcaption></figure><figure><a href="../../media/45f09278b0aaaae2.png" target="_blank"><img loading="lazy" src="../../media/45f09278b0aaaae2.png" alt="05_船坞装船"></a><figcaption>05_船坞装船</figcaption></figure><figure><a href="../../media/dd7ba3c6fe8e3661.png" target="_blank"><img loading="lazy" src="../../media/dd7ba3c6fe8e3661.png" alt="06_木筏装好"></a><figcaption>06_木筏装好</figcaption></figure><figure><a href="../../media/46ded35e3c724f0e.png" target="_blank"><img loading="lazy" src="../../media/46ded35e3c724f0e.png" alt="07_出航"></a><figcaption>07_出航</figcaption></figure><figure><a href="../../media/a5b4051e60958a8c.png" target="_blank"><img loading="lazy" src="../../media/a5b4051e60958a8c.png" alt="08_晴岚港进货"></a><figcaption>08_晴岚港进货</figcaption></figure><figure><a href="../../media/d8a19dc0d44ccaa7.png" target="_blank"><img loading="lazy" src="../../media/d8a19dc0d44ccaa7.png" alt="09_海盗巡逻船"></a><figcaption>09_海盗巡逻船</figcaption></figure><figure><a href="../../media/b419d19e3aeef784.png" target="_blank"><img loading="lazy" src="../../media/b419d19e3aeef784.png" alt="10_副本"></a><figcaption>10_副本</figcaption></figure><figure><a href="../../media/6574b74b9499d9bb.png" target="_blank"><img loading="lazy" src="../../media/6574b74b9499d9bb.png" alt="11_战后面板"></a><figcaption>11_战后面板</figcaption></figure><figure><a href="../../media/f56d3df2cfeeea07.png" target="_blank"><img loading="lazy" src="../../media/f56d3df2cfeeea07.png" alt="12_满载回家"></a><figcaption>12_满载回家</figcaption></figure><figure><a href="../../media/8a49f10be61cf3c8.png" target="_blank"><img loading="lazy" src="../../media/8a49f10be61cf3c8.png" alt="13_货箱滚进仓库"></a><figcaption>13_货箱滚进仓库</figcaption></figure><figure><a href="../../media/90f85d94d05c04a0.png" target="_blank"><img loading="lazy" src="../../media/90f85d94d05c04a0.png" alt="14_摆摊"></a><figcaption>14_摆摊</figcaption></figure><figure><a href="../../media/f4d2cc2e5fbfffee.png" target="_blank"><img loading="lazy" src="../../media/f4d2cc2e5fbfffee.png" alt="15_夜市"></a><figcaption>15_夜市</figcaption></figure><figure><a href="../../media/4231dedc270ca720.png" target="_blank"><img loading="lazy" src="../../media/4231dedc270ca720.png" alt="16_打烊结算"></a><figcaption>16_打烊结算</figcaption></figure><figure><a href="../../media/1581fce10285b8b3.png" target="_blank"><img loading="lazy" src="../../media/1581fce10285b8b3.png" alt="17_第二天早上"></a><figcaption>17_第二天早上</figcaption></figure><figure><a href="../../media/e1927fdb2c5e233f.png" target="_blank"><img loading="lazy" src="../../media/e1927fdb2c5e233f.png" alt="18_空岛走动镜头和交互描边"></a><figcaption>18_空岛走动镜头和交互描边</figcaption></figure><figure><a href="../../media/5e25c5a3839fdad2.png" target="_blank"><img loading="lazy" src="../../media/5e25c5a3839fdad2.png" alt="19_空岛躲在树后面_树变半透明"></a><figcaption>19_空岛躲在树后面_树变半透明</figcaption></figure><figure><a href="../../media/1c2844efeb7751aa.png" target="_blank"><img loading="lazy" src="../../media/1c2844efeb7751aa.png" alt="20_空岛告示板后面_按轮廓挡住"></a><figcaption>20_空岛告示板后面_按轮廓挡住</figcaption></figure><figure><a href="../../media/b73de476f48e7172.png" target="_blank"><img loading="lazy" src="../../media/b73de476f48e7172.png" alt="21_空岛栈桥上船后面"></a><figcaption>21_空岛栈桥上船后面</figcaption></figure><figure><a href="../../media/077d5191829bfe36.png" target="_blank"><img loading="lazy" src="../../media/077d5191829bfe36.png" alt="22_按住Tab看全岛"></a><figcaption>22_按住Tab看全岛</figcaption></figure><figure><a href="../../media/bd56c3aa571afee0.png" target="_blank"><img loading="lazy" src="../../media/bd56c3aa571afee0.png" alt="23_夜市摊位后面"></a><figcaption>23_夜市摊位后面</figcaption></figure><figure><a href="../../media/5ed66d1ee0d521cb.png" target="_blank"><img loading="lazy" src="../../media/5ed66d1ee0d521cb.png" alt="24_夜市按住Tab看全岛"></a><figcaption>24_夜市按住Tab看全岛</figcaption></figure><figure><a href="../../media/44d96ff74cd8f315.png" target="_blank"><img loading="lazy" src="../../media/44d96ff74cd8f315.png" alt="25_空岛走到房子后面_房子变半透明"></a><figcaption>25_空岛走到房子后面_房子变半透明</figcaption></figure><figure><a href="../../media/86745953cb59b9e7.png" target="_blank"><img loading="lazy" src="../../media/86745953cb59b9e7.png" alt="26_夜市柜台和灯光"></a><figcaption>26_夜市柜台和灯光</figcaption></figure></div></details><details><summary>用时</summary><p>用时 2 小时 0 分 · 263 步 · 输出 93k token · 重读上下文 103.9M token · 做完于 2026-10-13 14:53</p></details><details><summary>改了哪些文件（比起 003-r00-free：新加 27 · 改动 21 · 删掉 0）</summary><div class="files"><div>＋ 资料/空岛零件/barrels/barrels.png</div><div>＋ 资料/空岛零件/bench/bench.png</div><div>＋ 资料/空岛零件/blender/blender.png</div><div>＋ 资料/空岛零件/board/board.png</div><div>＋ 资料/空岛零件/bush/bush.png</div><div>＋ 资料/空岛零件/cliff/cliff.png</div><div>＋ 资料/空岛零件/cliff_tall/cliff_tall.png</div><div>＋ 资料/空岛零件/cottage/cottage.png</div><div>＋ 资料/空岛零件/counter/counter.png</div><div>＋ 资料/空岛零件/fence_h/fence_h.png</div><div>＋ 资料/空岛零件/fence_v/fence_v.png</div><div>＋ 资料/空岛零件/house/house.png</div><div>＋ 资料/空岛零件/lamp/lamp.png</div><div>＋ 资料/空岛零件/pier/pier.png</div><div>＋ 资料/空岛零件/shipyard/shipyard.png</div><div>＋ 资料/空岛零件/stall/stall.png</div><div>＋ 资料/空岛零件/stall_b/stall_b.png</div><div>＋ 资料/空岛零件/stall_g/stall_g.png</div><div>＋ 资料/空岛零件/tile_cobble/tile_cobble.png</div><div>＋ 资料/空岛零件/tile_dirt/tile_dirt.png</div><div>＋ 资料/空岛零件/tile_grass/tile_grass.png</div><div>＋ 资料/空岛零件/tile_plank/tile_plank.png</div><div>＋ 资料/空岛零件/tree_a/tree_a.png</div><div>＋ 资料/空岛零件/tree_b/tree_b.png</div><div>＋ 资料/空岛零件/underside/underside.png</div><div>＋ 资料/空岛零件/warehouse/warehouse.png</div><div>＋ 资料/空岛零件/说明.md</div><div>～ assets/sprites.js</div><div>～ design.md</div><div>～ game/demo.js</div><div>～ game/isle_layout.js</div><div>～ game/isle_view.js</div><div>～ game/main.js</div><div>～ game/scene_island.js</div><div>～ game/scene_market.js</div><div>～ notes.md</div><div>～ tools/build.html</div><div>～ tools/isle_shots.mjs</div><div>～ tools/layout.html</div><div>～ tools/layout.mjs</div><div>～ tools/play.mjs</div><div>～ tools/plays/dock.mjs</div><div>～ tools/plays/full.mjs</div><div>～ tools/plays/market.mjs</div><div>～ tools/plays/night1.mjs</div><div>～ tools/plays/order.mjs</div><div>～ tools/sheet.html</div><div>～ 核心切片设计.md</div></div></details><details><summary>这一轮收到的 prompt</summary><pre># 满舱而归 · 对比模式简报
+
+设计文档：`design.md`（在你的文件夹里；SHA-256 41fbfcb04c45a8879975789cb1d7e8fb8c4f3ff86cbf0f7e6dd9871e6ffc5d94）。这份文档是用户和设计师一起定下的，是这个游戏的设计依据。
+
+用户对自己每个游戏都有的要求：
+- Steam 上的 PC 游戏，横屏，网页技术做，打包成 Windows 和 macOS 版。
+- 美术全部用代码画，默认像素风，不用任何外部生图工具。
+- 开发期界面只做中文，上线时再加语言。
+- 试玩版和正式版都有在线联机。
+- 代码放 GitHub 时一律建私有库，不建公开库，不用 GitHub Pages 发网页。
+
+工作方式：
+- 不问用户任何问题：自己决定，把每个假设写进 `notes.md`。
+- 交付物放在你自己的文件夹里：能在浏览器里玩的 `index.html`（或能打开的构建）、设计文档、`notes.md`（试什么、哪些是占位、做了哪些假设）。
+- 不要读别的文件夹里的东西，也不要去找别的会话的结果。
+- 本机：Chrome 在 /Applications/Google Chrome.app，Node 和 Python 3 在 PATH 上。任何自动试跑都要无头，不要在用户屏幕上弹窗口。
+- 这一段不往网上推送或发布任何东西（不建远程仓库、不部署），都留在本机。
+- 没有时间和轮数限制，做完为止。
+
+
+这一段的目标：空岛照星露谷的做法重新拼。游戏已经在当前文件夹里（前几步做的），在它上面改；上一步做好的镜头跟着船长、按住 Tab 看全岛、整个游戏画面顺，都留着。
+1. 空岛是拼起来的，不是一整张图：地面用图块铺，岛边和岛底单独一层；每栋建筑、每棵树、每个摊位、栅栏、灯、木桶、长椅都是单独的透明零件。
+2. 人和这些零件按脚底的位置排前后，走到后面按零件的轮廓被挡住，看不到方框；树和屋顶挡住人时变半透明。
+3. 镜头拉近了也清楚：每个零件从源图直接缩到要的大小，同一场景一套像素格、一套色板。
+4. 夜市在同一座岛上：夜里调暗、点灯，不另用一张图。
+5. 能交互的东西照旧有描边，描边贴着零件的轮廓。
+零件在 资料/空岛零件/（先读里面的 说明.md）：地面图块、建筑、树和道具，是主会话按设计文档的美术方案刚出的。原来那张整岛图最多只当按住 Tab 看全岛时的远景。
+同组还有一步在把战斗改成大地图上就地开打的横版战斗（会重写竖版射击和大地图上开战的部分）：那两处别动；主循环和共用的渲染尽量少改，改了就在 notes.md 写清，合并时要用。
+
+简报和设计文档都在你当前的文件夹里。
+
+用户这次的原话（这一轮最优先的事）：
+「不，我觉得你这个空岛应该是拼起来的， 不够高清导致这个像一张图片出来的 ，而且是应该是按照透明度的遮罩 你这版本不是，会显示出图片的方框 ，很难受，星露谷怎么做的 ，我们就怎么做」
+美术照设计文档「画面风格」里的「美术方案（已拍板）」做，这一条比上面「美术全部用代码画、不用外部生图工具」优先：原来的零件、工具和说明在 美术/（先读 美术/说明.md），这一步新的空岛零件在 资料/空岛零件/。</pre></details></main></body></html>

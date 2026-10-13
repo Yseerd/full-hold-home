@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>第 1 轮 · 自动演示 · 满舱而归</title><style>
+:root{--bg:#f6f3ec;--panel:#fffdf8;--ink:#1f1b16;--soft:#5d5448;--line:#e2dacb;--brass:#9a6a1c;--brass-ink:#fff;--sky:#2f6f8f;--code:#f0ebe0}
+@media (prefers-color-scheme:dark){:root{--bg:#14120f;--panel:#1d1a16;--ink:#efe9de;--soft:#b3a893;--line:#3a332a;--brass:#d39b3c;--brass-ink:#1a1408;--sky:#7fb7d4;--code:#2a251e}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px}
+a{color:var(--sky)}h1{font-size:clamp(1.5rem,4.5vw,2.1rem);line-height:1.3;margin:.2em 0 .3em}
+h2{font-size:1.25rem;margin:1.6em 0 .5em}h3{font-size:1.08rem;margin:1.4em 0 .4em}h4,h5,h6{font-size:1rem;margin:1.2em 0 .3em}
+.sub{color:var(--soft);margin:0 0 1.2em}.nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.92rem;margin-bottom:10px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.btn{display:inline-flex;align-items:center;gap:.45em;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn.main{background:var(--brass);border-color:var(--brass);color:var(--brass-ink)}.btn:hover{filter:brightness(1.06)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 20px 14px;margin:16px 0}
+.cols{display:grid;grid-template-columns:1fr;gap:16px}@media (min-width:900px){.cols.two{grid-template-columns:1fr 1fr}main.wide{max-width:1400px}}
+.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--soft);margin-left:6px;vertical-align:middle;font-weight:500}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin:12px 0;padding:0 16px}
+summary{cursor:pointer;padding:12px 0;font-weight:600}details[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+code{background:var(--code);padding:1px 5px;border-radius:5px;font-size:.9em;word-break:break-all}
+pre{background:var(--code);padding:12px;border-radius:10px;overflow-x:auto;white-space:pre-wrap;word-break:break-word;font-size:.88rem;line-height:1.6}
+pre code{background:none;padding:0}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding-bottom:14px}
+.shots figure{margin:0}.shots img{width:100%;border-radius:8px;border:1px solid var(--line);image-rendering:pixelated;display:block}
+.shots figcaption{font-size:.85rem;color:var(--soft);margin-top:4px}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem;margin:8px 0}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+ul,ol{padding-left:1.4em}li{margin:.15em 0}.files{font-size:.9rem;columns:2 260px;padding-bottom:12px}.files div{break-inside:avoid}
+.rounds{list-style:none;padding:0;margin:0}.rounds li{border-top:1px solid var(--line);padding:14px 0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.rounds .what{flex:1 1 320px}.rounds .what b{display:block}.rounds .what span{color:var(--soft);font-size:.93rem}
+.rounds .go{display:flex;gap:8px;flex-wrap:wrap}.rounds .go a{font-size:.9rem;padding:6px 12px}
+.muted{color:var(--soft)}footer{margin-top:40px;color:var(--soft);font-size:.85rem}
+</style></head><body><main><div class="nav"><a href="../../index.html">← 全部轮次</a><a href="../001-r00-free/index.html">‹ 上一轮：第 0 轮 · 自由做</a></div><h1>第 1 轮 · 自动演示<span class="tag">002-r01-autoplay</span></h1><p class="sub">满舱而归 · 每一轮单独保存、能单独玩；和上一轮比，看这一轮有没有让游戏变好。</p><div class="btns"><a class="btn main" href="../r/002-r01-autoplay/play/index.html" target="_blank" rel="noopener">▶ 玩这一版</a><a class="btn" href="../r/002-r01-autoplay/play/demo.html" target="_blank" rel="noopener">▶ 自动演示</a><a class="btn" href="../001-r00-free/play/index.html" target="_blank" rel="noopener">▶ 玩上一版（001-r00-free）</a></div><div class="card"><p>（这一轮的子代理用英文汇报，下面是主会话照原文翻的中文；原文在 result.json。）</p>
+<p><code>demo.html</code> 做好了。点一下，机器人就从标题开始玩一整局，玩完回到标题，点「重新开始」接着下一局；按 Esc 停。最后一次无头测试（6 倍速跑 9 分钟，约合游戏里 54 分钟）玩完了 3 整局、开了第 4 局，卡住 0 次，运行错误 0 个。每一局都在第 4 天造出了驮兽货船。</p>
+<p><strong>演示怎么跑</strong></p>
+<ul><li>
+<strong>一局算多长：</strong> 游戏没有结局，所以我把切片的一整条弧当成一局：从开场的木筏开始，经过装船、进货、打仗、夜市，攒够钱造出驮兽货船、开它回一次家、关掉那晚的夜市，就算一局。最多 6 天，正常速度约 15–17 分钟。<code>?days=N</code> 可以固定长度。
+</li><li>
+<strong>输入：</strong> 机器人只按键、移动和点击鼠标，走的是和真玩家一样的输入路径。它从不改存档，也不调游戏里改状态的函数。
+</li><li>
+<strong>它看什么：</strong> 照屏幕上说的做：提示行、目标箭头、「E」提示、按钮上的字、客人的气泡和子弹。
+</li><li>
+<strong>它自己拿主意的地方：</strong> 被海盗追上时，船体值 60% 以上就开战，低于就认栽。告示板上接一张订单。打仗时躲子弹、瞄准、接箱子。
+</li><li>
+<strong>跑的时候：</strong> 除了 Esc，你的键盘和鼠标都被挡住；按 Esc 以后交还给你。
+</li><li>
+<strong>存档：</strong> 演示用自己的存档位，不碰你的。
+</li></ul>
+<p><strong>机器人撞出来的游戏毛病，都改在游戏里（没有在机器人那边绕过去）</strong></p>
+<div class=tbl><table><thead><tr><th>机器人碰到了什么</th><th>怎么改的</th></tr></thead><tbody><tr><td>从第二晚起敲铃一个客人都不来，夜市当场关门，什么都卖不出去</td><td>每晚的客人数每晚重算</td></tr><tr><td>第二晚如果没有哪个摊位有 2 箱以上，客人一直不来，夜市也一直不关</td><td>这种情况跳过那一课</td></tr><tr><td>教完以后，大地图上完全没有方向</td><td>加了建议路线（箭头、提示行、小地图上的圈）：先打附近的海盗和残骸，再去城镇装满，再回家；被追时指最近的安全圈。可以不理它</td></tr><tr><td>空岛提示写「出航，或者开市」，没说先做哪个</td><td>提示看一天里的时候：早上去告示板，再去船坞；回家后去集市；仓库空了就去睡。要去的建筑会亮起来</td></tr><tr><td>造好驮兽货船以后开不出去，一局卡在船坞</td><td>木筏上的模块搬过去（照 design.md 的「换底模」）。「一键装好」按推荐装法装，缺的白色模块钱够就当场造，按钮上写花多少</td></tr><tr><td>钱全花在驮兽上，剩下的不够买模块，结果比木筏还差</td><td>船坞的建议行只在船身加模块都买得起时，才说「可以造了」</td></tr><tr><td>我第一版路线只在城镇倒货：不打仗，船材卡在 40，没有口碑</td><td>战利品按今晚的价钱加口碑估值；造驮兽只差船材时，建议先去铁桅镇买</td></tr><tr><td>认栽要一箱一箱点</td><td>默认选好最便宜、刚够 20% 的几箱</td></tr><tr><td>新造的驮兽出航时船体值只有 150/180</td><td>停在自家船坞的船永远是修满的</td></tr><tr><td>「一键装好」把你手上拿着的模块算成缺的，会再造一件</td><td>改了</td></tr><tr><td>每晚船长大约一半时间站着没事</td><td>切片里摊位离柜台只有设计文档的一半远，所以客人间隔也减半；路上没人时，下一位客人马上来、走得快。机器人闲着的时间从约 50% 降到约 30%</td></tr></tbody></table></div>
+<p><strong>跑过的检查：</strong> 原来的乱按测试（每一屏随机输入）0 个错误。原来按脚本走完一整天的测试照样通过，顺手更新了 <code>截图/</code> 里的截图。Esc 测试每一项都过了。强制被追的测试里，机器人扔箱子甩掉了海盗，也有被追上、按默认选择认栽的。</p>
+<p><strong>还没解决：</strong></p>
+<ul><li>
+每晚机器人还有约 30% 的时间在等，因为它递货比人快得多。再压紧，真人就忙不过来了。
+</li><li>
+机器人几乎不挨打，所以演示里很少看到甲板货飞出去或者被击落。<code>node tools/play.mjs down</code> 仍然能测这个。
+</li></ul>
+<p>客人间隔减半是改了设计里的数（notes.md 写了：摊位照设计文档的距离摆开以后改回来）；其他决定记在 notes.md 第 25–29 条，上面那张改动表也在那里。出过一次差错：一条写错的命令在文件夹外面建了一个空的 <code>/tmp/null</code>，我马上删了；除此之外文件夹外面什么都没写，也没往任何地方推送。</p>
+<p>文件都在这一轮的文件夹里：</p>
+<ul><li>
+<code>demo.html</code>
+</li><li>
+<code>game/demo.js</code>（机器人）
+</li><li>
+<code>game/main.js</code>、<code>ui.js</code>、<code>state.js</code>、<code>data.js</code>、<code>scene_map.js</code>、<code>scene_island.js</code>、<code>scene_dock.js</code>、<code>scene_market.js</code>（游戏的改动）
+</li><li>
+<code>tools/demo.mjs</code>、<code>demo_esc.mjs</code>、<code>demo_fight.mjs</code>、<code>demo_chase.mjs</code>、<code>demo_night.mjs</code>、<code>demo_shots.mjs</code>（无头测试脚本；截图存到 <code>shots/demo/</code>）
+</li><li>
+<code>notes.md</code> 和 <code>核心切片设计.md</code>（更新过；<code>design.md</code> 没动）
+</li></ul></div><details><summary>截图（这一轮新拍或改过的 29 张）</summary><div class="shots"><figure><a href="../../media/dc33d22d236022c1.png" target="_blank"><img loading="lazy" src="../../media/dc33d22d236022c1.png" alt="0_点一下开始"></a><figcaption>0_点一下开始</figcaption></figure><figure><a href="../../media/9ac49942075bdbd5.png" target="_blank"><img loading="lazy" src="../../media/9ac49942075bdbd5.png" alt="a_标题"></a><figcaption>a_标题</figcaption></figure><figure><a href="../../media/7c0c48b078553ecf.png" target="_blank"><img loading="lazy" src="../../media/7c0c48b078553ecf.png" alt="b_开场"></a><figcaption>b_开场</figcaption></figure><figure><a href="../../media/824e05d70dffbbd0.png" target="_blank"><img loading="lazy" src="../../media/824e05d70dffbbd0.png" alt="c_船坞教学"></a><figcaption>c_船坞教学</figcaption></figure><figure><a href="../../media/828dc30aadf95e8c.png" target="_blank"><img loading="lazy" src="../../media/828dc30aadf95e8c.png" alt="d_第2天早上"></a><figcaption>d_第2天早上</figcaption></figure><figure><a href="../../media/74f5524b14100814.png" target="_blank"><img loading="lazy" src="../../media/74f5524b14100814.png" alt="e_船坞建议"></a><figcaption>e_船坞建议</figcaption></figure><figure><a href="../../media/1d3db26f89cf1753.png" target="_blank"><img loading="lazy" src="../../media/1d3db26f89cf1753.png" alt="esc"></a><figcaption>esc</figcaption></figure><figure><a href="../../media/fef7e355af2164b1.png" target="_blank"><img loading="lazy" src="../../media/fef7e355af2164b1.png" alt="f_建议航线"></a><figcaption>f_建议航线</figcaption></figure><figure><a href="../../media/48066b9bf1d81af0.png" target="_blank"><img loading="lazy" src="../../media/48066b9bf1d81af0.png" alt="g_夜市"></a><figcaption>g_夜市</figcaption></figure><figure><a href="../../media/004802f7f8379639.png" target="_blank"><img loading="lazy" src="../../media/004802f7f8379639.png" alt="h_造驮兽"></a><figcaption>h_造驮兽</figcaption></figure><figure><a href="../../media/cc8c649c81992b53.png" target="_blank"><img loading="lazy" src="../../media/cc8c649c81992b53.png" alt="i_驮兽出航"></a><figcaption>i_驮兽出航</figcaption></figure><figure><a href="../../media/378d6dd69d90cb0e.png" target="_blank"><img loading="lazy" src="../../media/378d6dd69d90cb0e.png" alt="last"></a><figcaption>last</figcaption></figure><figure><a href="../../media/a6bc521da02d8f4b.png" target="_blank"><img loading="lazy" src="../../media/a6bc521da02d8f4b.png" alt="yield"></a><figcaption>yield</figcaption></figure><figure><a href="../../media/9bd928b2ce430b6e.png" target="_blank"><img loading="lazy" src="../../media/9bd928b2ce430b6e.png" alt="01_开场被追"></a><figcaption>01_开场被追</figcaption></figure><figure><a href="../../media/31e55662f8d5f4d3.png" target="_blank"><img loading="lazy" src="../../media/31e55662f8d5f4d3.png" alt="02_开场扔货"></a><figcaption>02_开场扔货</figcaption></figure><figure><a href="../../media/e7131cff212ee1f1.png" target="_blank"><img loading="lazy" src="../../media/e7131cff212ee1f1.png" alt="03_冒尖而归"></a><figcaption>03_冒尖而归</figcaption></figure><figure><a href="../../media/6afaea3e461d022d.png" target="_blank"><img loading="lazy" src="../../media/6afaea3e461d022d.png" alt="05_船坞装船"></a><figcaption>05_船坞装船</figcaption></figure><figure><a href="../../media/dc337a8ee96c96ff.png" target="_blank"><img loading="lazy" src="../../media/dc337a8ee96c96ff.png" alt="06_木筏装好"></a><figcaption>06_木筏装好</figcaption></figure><figure><a href="../../media/d5df632c2c5479a1.png" target="_blank"><img loading="lazy" src="../../media/d5df632c2c5479a1.png" alt="07_出航"></a><figcaption>07_出航</figcaption></figure><figure><a href="../../media/fde401eb8565b9b8.png" target="_blank"><img loading="lazy" src="../../media/fde401eb8565b9b8.png" alt="08_晴岚港进货"></a><figcaption>08_晴岚港进货</figcaption></figure><figure><a href="../../media/0c823ad74058c5c1.png" target="_blank"><img loading="lazy" src="../../media/0c823ad74058c5c1.png" alt="09_海盗巡逻船"></a><figcaption>09_海盗巡逻船</figcaption></figure><figure><a href="../../media/0cf40796c20eb9bc.png" target="_blank"><img loading="lazy" src="../../media/0cf40796c20eb9bc.png" alt="10_副本"></a><figcaption>10_副本</figcaption></figure><figure><a href="../../media/70f93b7ece398ed1.png" target="_blank"><img loading="lazy" src="../../media/70f93b7ece398ed1.png" alt="11_战后面板"></a><figcaption>11_战后面板</figcaption></figure><figure><a href="../../media/654b16f9ef7843bb.png" target="_blank"><img loading="lazy" src="../../media/654b16f9ef7843bb.png" alt="12_满载回家"></a><figcaption>12_满载回家</figcaption></figure><figure><a href="../../media/98ccea8b5d180a35.png" target="_blank"><img loading="lazy" src="../../media/98ccea8b5d180a35.png" alt="13_货箱滚进仓库"></a><figcaption>13_货箱滚进仓库</figcaption></figure><figure><a href="../../media/7ba4a3c54978ef25.png" target="_blank"><img loading="lazy" src="../../media/7ba4a3c54978ef25.png" alt="14_摆摊"></a><figcaption>14_摆摊</figcaption></figure><figure><a href="../../media/7b84b71ec4c546b0.png" target="_blank"><img loading="lazy" src="../../media/7b84b71ec4c546b0.png" alt="15_夜市"></a><figcaption>15_夜市</figcaption></figure><figure><a href="../../media/78ff7e922a671f10.png" target="_blank"><img loading="lazy" src="../../media/78ff7e922a671f10.png" alt="16_打烊结算"></a><figcaption>16_打烊结算</figcaption></figure><figure><a href="../../media/9cc557f41679aec1.png" target="_blank"><img loading="lazy" src="../../media/9cc557f41679aec1.png" alt="17_第二天早上"></a><figcaption>17_第二天早上</figcaption></figure></div></details><details><summary>用时</summary><p>用时 2 小时 18 分 · 102 步 · 输出 65k token · 重读上下文 28.6M token · 做完于 2026-10-13 09:58</p></details><details><summary>改了哪些文件（比起 001-r00-free：新加 8 · 改动 10 · 删掉 0）</summary><div class="files"><div>＋ demo.html</div><div>＋ game/demo.js</div><div>＋ tools/demo.mjs</div><div>＋ tools/demo_chase.mjs</div><div>＋ tools/demo_esc.mjs</div><div>＋ tools/demo_fight.mjs</div><div>＋ tools/demo_night.mjs</div><div>＋ tools/demo_shots.mjs</div><div>～ game/data.js</div><div>～ game/main.js</div><div>～ game/scene_dock.js</div><div>～ game/scene_island.js</div><div>～ game/scene_map.js</div><div>～ game/scene_market.js</div><div>～ game/state.js</div><div>～ game/ui.js</div><div>～ notes.md</div><div>～ 核心切片设计.md</div></div></details><details><summary>这一轮收到的 prompt</summary><pre>这是第 1 轮打磨：做自动演示。游戏和设计文档都在当前文件夹。
+范围：整个游戏。
+
+- 在 `index.html` 旁边做一个 `demo.html`：打开后点一下，机器人从标题开始自己玩，一局完了接着开下一局，按 Esc 停。
+- 机器人只用玩家能用的操作，演示游戏默认会做的事，不靠额外下指令去赢。
+- 机器人卡住、站着不动、没事可做的地方，是游戏的毛病：修游戏，不修机器人。
+
+自动试跑都无头，不在屏幕上开窗口；不问问题，自己决定；不往网上推送。
+只在当前文件夹里看和改：不要打开上一级文件夹，也不要看别的轮次的文件夹，也不要去看 … 里的技能和规则（这一轮要的都写在上面；带 prompt 的和只给目标的两份要互相看不见）。</pre></details></main></body></html>

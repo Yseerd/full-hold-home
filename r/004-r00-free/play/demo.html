@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>满舱而归 · 自动演示</title>
+<style>
+  html,body{margin:0;height:100%;background:#0b0a0d;overflow:hidden}
+  canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges}
+  #loading{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;color:#c8963e;font:16px "PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:.1em}
+</style>
+</head>
+<body>
+<div id="loading">满舱而归 · 自动演示 · 载入中</div>
+<canvas id="screen"></canvas>
+<!-- 自动演示：和 index.html 是同一个游戏，只多载入 game/demo.js（机器人）；存档用另一个位置，不碰你自己的存档 -->
+<script>window.MCG_SAVE_KEY = 'mcg-slice-demo-v1';</script>
+<!-- 像素美术：hi-bit 路线构建出来的零件（tools/build.html → assets/sprites.js） -->
+<script src="assets/sprites.js"></script>
+<script src="game/util.js"></script>
+<script src="game/data.js"></script>
+<script src="game/state.js"></script>
+<script src="game/art.js"></script>
+<script src="game/sfx.js"></script>
+<script src="game/ui.js"></script>
+<script src="game/main.js"></script>
+<!-- 就地开打的横版战斗：不切场景，在大地图上推近镜头打 -->
+<script src="game/battle.js"></script>
+<script src="game/scene_map.js"></script>
+<script src="game/scene_island.js"></script>
+<script src="game/scene_dock.js"></script>
+<script src="game/scene_market.js"></script>
+<script src="game/test.js"></script>
+<script src="game/demo.js"></script>
+</body>
+</html>
